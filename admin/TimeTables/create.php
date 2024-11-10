@@ -11,12 +11,10 @@
     <div class="row">
     <div class="col-6">
     <form action="insert.php" method="post">
-        <label for="">teacher_id</label>
+        <label for="">teacher</label>
         <input class="form-control" type="text" name="teacher_id" id="">
         <label for="">classes_id</label>
         <input class="form-control" type="text" name="classes_id" id="">
-        <label for="">clock_id</label>
-        <input class="form-control" type="text" name="clock_id" id="">
         <input class="btn btn-primary" type="submit" value="Add" id="">
     </form>
     </div>    

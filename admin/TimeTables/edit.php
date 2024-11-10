@@ -5,6 +5,7 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
     $sql = "SELECT * FROM TimeTables where id = $id;";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+    print_r($row);
 } else {
   header('Location:select.php');  
 }
@@ -24,12 +25,10 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
         <div class="row">
             <div class="col-6">
                 <form action="update.php" method="get">
-                    <label for="">teacher_id</label><br>
+                    <label for="">Учитель</label><br>
                     <input class="form-control" value="<?=$row['teacher_id'];?>" name="teacher_id" type="text"><br>
-                    <label for="">classes_id</label><br>
+                    <label for="">Класс</label><br>
                     <input class="form-control" value="<?=$row['classes_id'];?>" name="classes_id" type="text"><br>
-                    <label for="">clock_id</label><br>
-                    <input class="form-control" value="<?=$row['clock_id'];?>" name="clock_id" type="text"><br>
                     <input type="hidden" name="id" value="<?=$id?>">
                     <input class="btn btn-primary" type="submit">
                 </form>
